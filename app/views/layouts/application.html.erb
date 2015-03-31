@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TimeTracker</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="container">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <%= link_to 'Time Tracker', root_path, class: 'navbar-brand' %>
+    </div>
+  </nav>
+  
+</header>
+
+<div class="container">
+  <%= flash_messages if show_layout_flash? %>
+
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>
