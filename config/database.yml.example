@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+
+development:
+  <<: *default
+  database: TimeTracker_development
+test:
+  <<: *default
+  database: TimeTracker_test
+
+production:
+  <<: *default
+  database: TimeTracker_production
+

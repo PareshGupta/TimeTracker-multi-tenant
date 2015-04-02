@@ -1,28 +1,23 @@
-== README
+== TimeTracker(MultiTenant App)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic app with multi-tenancy feature using postgresql database and using gem apartment.
 
-Things you may want to cover:
+* Introduction
 
-* Ruby version
+This app is basically creating an account and with that account inviting users to access that account. Different schemas are used for different accounts in same database. Data of one account cannot be accessed with other account.
 
-* System dependencies
+* Setup
 
-* Configuration
+1) fork the repository to your github account.
 
-* Database creation
+2) clone the repository to the system.
 
-* Database initialization
+3) rename file 'database.yml.example' to 'database.yml' and add username and password for your postgresql.
 
-* How to run the test suite
+4) install all required gem dependencies using `bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+5) run `rails server` to finally run the app.
 
-* Deployment instructions
-
-* ...
+6) use 'lvh.me:3000' to run the app on the your browser as it is a local virtual host and accepts subdomain.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
