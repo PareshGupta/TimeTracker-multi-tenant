@@ -12,9 +12,11 @@ gem 'jquery-rails'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails'
 gem 'devise'
 gem 'apartment'
+gem 'devise_invitable'
 
 group :development, :test do
   gem 'byebug'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 

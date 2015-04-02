@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.8)
     anjlab-bootstrap-rails (3.0.3.0)
       railties (>= 3.0)
       sass (>= 3.2)
@@ -62,6 +63,9 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise_invitable (1.4.2)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
     erubis (2.7.0)
     execjs (2.4.0)
     globalid (0.3.3)
@@ -73,6 +77,10 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.3.0)
+      launchy (~> 2.2)
     libv8 (3.16.14.7)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
@@ -158,7 +166,9 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  devise_invitable
   jquery-rails
+  letter_opener
   pg
   quiet_assets
   rails (= 4.2.0)

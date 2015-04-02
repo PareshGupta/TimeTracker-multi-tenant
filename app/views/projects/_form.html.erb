@@ -1,0 +1,24 @@
+<%= form_for(@project, wrapper_mappings: { boolean: :vertical_boolean }) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <br/>
+
+  <div>
+    <%= f.label :client %>
+    <%= f.text_field :client %>
+  </div>
+
+  <br/>
+
+  <% if @project.persisted? %>
+    <div>
+      <%= f.check_box :archived %>
+      <%= f.label :archived %>
+    </div>
+  <% end %>
+
+  <%= f.button :submit, class: 'btn-primary' %>
+<% end %>

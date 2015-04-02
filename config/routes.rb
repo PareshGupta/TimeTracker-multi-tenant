@@ -14,8 +14,9 @@ Rails.application.routes.draw do
 
   constraints(SubdomainPresent) do
     root 'projects#index', as: :subdomain_root
-    devise_for :users
+    devise_for :users, controllers: { invitations: 'user/invitations'}
     resources :users, only: :index
+    resources :projects, except: [:index, :show, :destroy]
   end
 
   constraints(SubdomainBlank) do
